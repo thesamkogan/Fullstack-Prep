@@ -1,0 +1,25 @@
+/*
+describe('converter', function() {
+  it('converter is a function', function() {
+    expect(typeof converter).toBe('function');    
+  });
+  it('takes a number as an argument and returns a number', function() {
+    expect(typeof converter(45)).toBe('number');
+  });
+  
+  it('converts fahrenheit temperatures to celsius', function() {
+    expect(converter(32)).toBe(0);
+  });
+}); 
+*/
+
+function converter(input) {
+  output = (input - 32) * (5 / 9);
+  /*toFixed output is a string*/
+  //output2 = output.toFixed(2);
+  return output;
+}
+
+console.log(converter(55));
+
+
