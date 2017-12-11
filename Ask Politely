@@ -1,0 +1,44 @@
+/* Write Code Here */
+function askPolitely(string) {
+	var isQ = string.slice(string.length-1);
+  var stringWords = string.split(" ");
+  var lastWord = stringWords.slice(stringWords.length-1);
+  console.log(isQ);
+  if (isQ === '?') {
+    if (lastWord === "please?") {
+        console.log('gay');   
+    }	else {
+        string.pop();
+        string.push('please?');
+        console.log('not gay');
+      }
+      */
+  } else if (isQ === '?' && lastWord !== "please?") {
+    
+    console.log('not gay');
+  } else {
+    console.log(string);
+  }
+}
+
+
+askPolitely('Give me your money please?');
+
+
+
+
+
+
+
+
+// EXAMPLE TESTS
+/*
+console.log(askPolitely("May I borrow your pencil?"));
+// OUTPUT: "May I borrow your pencil please?"
+
+console.log(askPolitely("May I borrow your pencil please?"));
+// OUTPUT: "May I borrow your pencil please?"
+
+console.log(askPolitely("My name is Grace Hopper."));
+// OUTPUT: "My name is Grace Hopper."
+*/
