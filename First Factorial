@@ -1,0 +1,26 @@
+/* 
+factorial
+factorial is a function
+factorial returns a number value
+returns the factorial of the number argument 
+*/
+
+
+function factorial(n) {
+  if (n === 0) {
+    return 1;
+  }
+  return n * factorial(n - 1);
+}
+
+
+
+
+
+//EXAMPLE TESTS
+
+console.log(factorial(4));
+//OUTPUT: 24
+
+console.log(factorial(5));
+//OUTPUT: 120
