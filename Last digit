@@ -1,5 +1,29 @@
+/*
+Initial run did not us "toString" to access the last symbol of the numbers inputed into lastDigit.
+
 function lastDigit(a, b) {
  if (a[1] === b[1]) {
+ return true;
+ } else {
+   return false;
+   }
+}
+
+lastDigit(22,32); 
+//OUTPUT: true
+
+lastDigit(77, 999); 
+//OUTPUT: false
+
+lastDigit(33,3); 
+//OUTPUT: true
+
+*/
+
+function lastDigit(num1, num2) {
+  numA = num1.toString();
+  numB = num2.toString();
+ if (numA.slice(-1) === numB.slice(-1)) {
  return true;
  } else {
    return false;
