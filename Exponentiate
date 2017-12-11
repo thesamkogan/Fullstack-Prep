@@ -1,0 +1,23 @@
+/*
+exponentiate
+exponentiate is a function
+returns a number
+raises the first argument to the power of the second argument
+*/
+
+function exponentiate(num1,num2) {
+	return num1 ** num2;
+}
+
+
+
+
+
+
+//EXAMPLE TESTS
+
+console.log(exponentiate(2, 2));
+// OUTPUT: 4
+
+console.log(exponentiate(3, 4));
+// OUTPUT: 81
