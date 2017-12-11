@@ -1,0 +1,16 @@
+function lastDigit(a, b) {
+ if (a[1] === b[1]) {
+ return true;
+ } else {
+   return false;
+   }
+}
+
+lastDigit(22,32); 
+//OUTPUT: true
+
+lastDigit(77, 999); 
+//OUTPUT: false
+
+lastDigit(33,3); 
+//OUTPUT: true
