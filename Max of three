@@ -1,0 +1,28 @@
+/* Write Code Here */
+function maxOfThree(a,b,c) {
+	if (a > b && a > c) {
+    return a;
+  } else if ( b > c && b > a ) {
+      return b;
+  } else if ( c > a && c > b ) {
+      return c;
+  } else {
+    if (a === c && a > b) {
+      return a;
+    } else if (a === b && b > c) {
+			return b;    
+    } else if (b === c && c > a) {
+        return c;
+    }
+  }
+
+
+
+
+
+// EXAMPLE TESTS
+
+console.log(maxOfThree(5,4,10));
+//OUTPUT: 10
+console.log(maxOfThree(7,7,4));
+//OUTPUT: 7
