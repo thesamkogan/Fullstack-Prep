@@ -1,0 +1,33 @@
+/* 
+Codepen was broke on this particular challenge.
+results were verified by separate codepen
+*/
+
+function palindrome(str) {
+  var strLow = str.toLowerCase(); 
+  var array = strLow.split('');
+  var finalArray = array.toString();
+  var rArray = array.reverse();
+  var rts = rArray.toString();
+  if (rts === finalArray) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+
+
+
+
+
+
+
+
+//EXAMPLE TESTS
+
+console.log(palindrome("racecar"));
+//OUTPUT: true
+
+console.log(palindrome("animal"));
+//OUTPUT: false
