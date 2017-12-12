@@ -1,0 +1,47 @@
+/*
+repeat
+is a function
+returns an empty string when num is 0
+repeats its argument once
+repeats its the string argument twice
+should not use the String.prototype.repeat method
+
+*/
+
+/* Initial idea was to turn the string into an array
+Thereby allowing me to push any characters to the array n amount of times.
+
+function repeat(str,num) {
+  str.split('');
+	for ( i=0 ; i < num-1 ; i++) {
+    return str.push(str);
+    
+  }
+}
+*/
+
+function repeat(str, num){
+	var finalStr = "";
+	
+	for(num; num > 0; num--){
+		finalStr+= str;
+	}
+
+	return finalStr;
+}
+
+
+
+
+
+
+//EXAMPLE TESTS
+
+console.log(repeat("yo", 4));
+// OUTPUT: 'yoyoyoyo'
+
+console.log(repeat("yo", 0));
+// OUTPUT: ''
+
+console.log(repeat("bye", 6));
+// OUTPUT: 'byebyebyebyebyebye'
