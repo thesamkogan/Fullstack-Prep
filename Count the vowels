@@ -1,0 +1,39 @@
+/*  
+vowelsCount
+should handle an empty String
+should handle a String with no Vowels
+should handle a String with Vowels
+should handle a String with multiple words and Vowels
+should handle a String with all vowels
+
+Initially struggled with the "all vowels" spec.
+it was misleading because the test was actually a word with mixed caps.
+*/
+
+function vowelsCount(str) {
+  var lowStr = str.toLowerCase();
+  var totalV = 0;
+  var strArray = lowStr.split('');
+  strArray.forEach(function(strArray)    { if (strArray === 'a' || strArray === 'e' || strArray === 'i' || strArray === 'o' || strArray === 'u') {
+    totalV += 1;
+  }
+});
+  return totalV;
+}
+
+
+
+
+
+
+//EXAMPLE TESTS
+
+console.log(vowelCount("Good Job"));
+// OUTPUT: 3
+
+
+console.log(vowelCount('Yankees'));
+// OUTPUT: 3
+
+console.log(vowelCount('AAAoei'));
+// OUTPUT: 6
