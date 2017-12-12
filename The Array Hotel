@@ -1,0 +1,28 @@
+/*
+findVacantRooms
+findVacantRooms is a function
+findVacantRooms returns an Array
+findVacantRooms returns an array of vacant room numbers
+findVacantRooms returns an empty array if all rooms are occupied
+findVacantRooms adds the index number to the array if the room is vacant
+*/
+
+/* Write Code Here */
+function findVacantRooms(array) {
+  var vacantRooms = [];
+  for (var index = 0; index < array.length ; index++) {
+    if (array[index] === "vacant") {
+      vacantRooms.push(index);
+    }
+  }
+  return vacantRooms;
+}
+
+
+
+
+//EXAMPLE TEST
+
+var rooms = ["vacant", "occupied", "occupied", "vacant", "vacant"];
+console.log(findVacantRooms(rooms));
+//OUTPUT: [0,3,4]
