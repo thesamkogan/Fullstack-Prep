@@ -1,0 +1,32 @@
+/* 
+reverseString
+reverseString is a function
+reverseString returns a string value
+reverses a string (the string it reverses is the argument)
+does not use Array.prototype.reverse
+
+Struggled with removing "," from the string after joining.
+Used stack overflow to figure out how to properly use .join().
+*/
+
+function reverseString(X) {
+	var Y = X.split("");
+  var Z = [];
+  for (var i = Y.length -1 ; i >= 0 ; i--) {
+  	Z.push(Y[i]);
+  }
+  return Z.join('');
+}
+
+
+
+
+
+
+
+
+console.log(reverseString("hello"));
+// OUTPUT: 'olleh'
+
+console.log(reverseString('Greetings from the moon!'));
+// OUTPUT: '!noom eht morf sgniteerG'
