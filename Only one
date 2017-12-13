@@ -1,0 +1,36 @@
+/*
+onlyOne
+is a function
+returns a boolean value
+returns true if one of its three arguments is truthy
+returns false if more than one of its arguments are truthy
+returns false if no arguments are truthy
+
+This problem gave me a lot of issue.
+Initially I tried to solve it without using the expression if/else 
+or the operators ||, && or ===, ==.
+I had to browse stackoverflow to get a solution after struggling with getting a truthy value to add 1 to sum.
+*/
+
+
+function onlyOne(first, second, third) {
+  var array = [first, second, third];
+  var score = 0;
+  for (var i = 0; i < array.length; i++) {
+    if (!!array[i]) {
+      score++;
+    }
+  }
+
+  if (score === 1) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(onlyOne(false, false, true));
+// OUTPUT: true
+
+console.log(onlyOne(0, 1, 2));
+// OUTPUT: false
