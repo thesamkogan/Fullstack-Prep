@@ -1,0 +1,32 @@
+/*
+zooInventory
+is a function
+returns an array of strings
+returns the correct string corresponding to the animal element
+
+completed very quickly, learned about nested arrays.
+initially tried without creating a new array
+*/
+
+function zooInventory(myZoo) {
+	arrayOfStrings = []
+	for (var i = 0 ; i < myZoo.length ; i++){
+  arrayOfStrings.push( (myZoo[i][0]) + ' the ' + (myZoo[i][1][0]) + ' is ' + (myZoo[i][1][1]));
+	}
+	return arrayOfStrings;
+}
+
+
+
+//EXAMPLE TESTS
+
+var myZoo = [
+  ["King Kong", ["gorilla", 42]],["Nemo", ["fish", 5]],["Punxsutawney Phil", ["groundhog", 11]]];
+
+console.log(zooInventory(myZoo));
+// OUTPUT: 
+// [
+//   'King Kong the gorilla is 42', 
+//   'Nemo the fish is 5',
+//   'Punzsutawney Phil the groundhog is 11'
+// ]
