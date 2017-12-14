@@ -1,0 +1,39 @@
+/* 
+countUpThenDown
+is a function
+returns an array
+each index in the returned array count from 0 up to the first argument and then count down to 0
+returns 0 if the argument is 0
+
+quick, first try.
+*/
+
+
+
+function countUpThenDown(peak) {
+  var array = []
+	for (var print = 0 ; print <= peak ; print++) {
+  	array.push(print);
+  } 
+  for (var descent = peak -1 ; descent >= 0 ; descent--) {
+    array.push(descent);
+  } return array;
+} 
+
+
+
+
+
+
+
+
+
+
+
+//EXAMPLE TESTS
+
+console.log(countUpThenDown(2));
+//OUTPUT: [0, 1, 2, 1, 0]
+
+console.log(countUpThenDown(0));
+//OUTPUT: [0]
