@@ -1,0 +1,41 @@
+/*
+fizzBuzz
+is a function
+returns a string
+if the argument is divisible by 3, return "Fizz"
+if the argument is divisible by 5, return "Buzz"
+if the argument is divisible by 3 and 5, return "FizzBuzz"
+returns an empty string if the argument is not divisible by 3 or 5
+*/
+
+function fizzBuzz(input) {
+	if (input % 15 === 0) {
+  	return 'FizzBuzz';} 
+  else if (input % 3 === 0) {
+  	return 'Fizz';}
+  else if (input % 5 === 0) {
+  return 'Buzz';}
+  else { return '';}
+}
+
+
+
+
+
+
+
+
+
+//EXAMPLE TESTS
+
+console.log(fizzBuzz(6));
+//OUTPUT: 'Fizz'
+
+console.log(fizzBuzz(10));
+//OUTPUT: 'Buzz'
+
+console.log(fizzBuzz(15));
+//OUTPUT:  'FizzBuzz'
+
+console.log(fizzBuzz(7));
+//OUTPUT: ''
