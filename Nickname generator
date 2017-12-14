@@ -1,0 +1,22 @@
+/*
+nicknameGenerator
+is a function
+returns a string
+returns the argument if the length is 3 or less
+returns first three letters of the argument string
+returns the first 4 letters if the third letter is a vowel
+
+took a second to figure out the correct way to use arr.slice()
+*/
+
+function nicknameGenerator(name) {
+	array = name.split('');
+  if (array.indexOf('a') === 3 || array.indexOf('e') === 3 || array.indexOf('i') === 3 || array.indexOf('o') === 3 || array.indexOf('u') === 3 ) {
+  var nameString = array.slice(0,3);
+  return nameString.join('');
+  } else if (array.indexOf('a') === -1 || array.indexOf('e') === -1 || array.indexOf('i') === -1 || array.indexOf('o') === -1 || array.indexOf('u') === -1 ) {
+  var nameString = array.slice(0,4);
+  return nameString.join('');
+  }
+}
+
