@@ -1,0 +1,62 @@
+/*
+Started completing the challenge, but it was wrong.
+the functions were tailored for the responses,
+and the program didn't check.
+
+function count(m, n, direction) {
+newArray = [];
+  if (direction === "Up") {
+    for (var i = 0 ; i < m/n ; i++) {
+      newArray.push(n+(n*i));
+    }return newArray;
+  }
+  else {
+    for (var i = 0 ; i < 4 ; i++) {
+      newArray.push(m-(n*i));
+    }return newArray;
+   }
+  
+}
+
+//EXAMPLE TESTS
+
+console.log(count(10, 2, "Up"));
+// OUTPUT: [2, 4, 6, 8, 10]
+
+console.log(count(11, 2, "Down"));
+// OUTPUT: [11, 9, 7, 5, 3, 1]
+
+count
+is a function
+returns an array
+counts up from 0
+counts down from "M"
+*/
+
+
+function count(end, by, direction) {
+var array = [];
+if (direction === 'Up') {
+	for (i = 0; i < end+1 ; i += by) {
+  	if (i !== 0) array.push(i);
+  	}
+  }
+ else if (direction === "Down") {
+   for (j = end ; j > 0 ; j -= by) {
+     if (i !== 0) array.push(j);
+   }
+ }
+   return array;
+}
+
+
+
+
+
+//EXAMPLE TESTS
+
+console.log(count(10, 2, "Up"));
+// OUTPUT: [2, 4, 6, 8, 10]
+
+console.log(count(11, 2, "Down"));
+// OUTPUT: [11, 9, 7, 5, 3, 1]
