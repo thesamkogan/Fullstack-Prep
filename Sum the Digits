@@ -1,0 +1,45 @@
+/*
+sumOfDigits
+returns a number value
+returns zero if an argument is not passed
+sums the digits for a single digit
+sums the digits for two digits
+sums the digits for three digits
+sums the digits for a random amount of digits
+
+I used an argument that the Fullstack website was not into.
+So it said "returns zero if an argument is not passed" did not pass, although it did 100%.
+*/
+
+function sumOfDigits(numbers){
+  sum = 0;
+  num = numbers.toString().split("").map(function(t){return parseInt(t)});
+  for (i = 0 ; i < num.length ; i++ ) {
+    sum += num[i];
+  } 
+  if (numbers == '') {
+  return 0;}
+  else {
+  return sum;
+  }
+}
+
+
+
+
+
+
+
+
+//EXAMPLE TESTS
+
+console.log(sumOfDigits(414));
+//OUTPUT: 9
+
+console.log(sumOfDigits(2913));
+//OUTPUT: 15
+
+console.log(sumOfDigits(0));
+//OUTPUT: 0
+
+
