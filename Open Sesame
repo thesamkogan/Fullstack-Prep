@@ -1,0 +1,38 @@
+/*
+
+
+openSesame
+is a function
+returns a string
+checks to see if the passed in string (string argument) can be found in the password array
+gives custom output if the password isn't in the array
+does not use the builtin method `indexOf`
+does not use the builtin method `includes`
+*/
+
+
+function openSesame(passwords,string) {
+  for (i = 0 ; i < passwords.length-1 ; i++ ) {
+    if (passwords[i] == string) {
+      return 'You may pass.';
+    } else {
+      return 'You shall not pass!';
+    }
+  }
+}
+
+
+
+
+
+//EXAMPLE TESTS
+var passwords = [
+  'Password123',
+  'DavidYangsMiddleName',
+];
+
+console.log(openSesame(passwords, 'Password123'));
+//OUTPUT: 'You may pass.'
+
+console.log(openSesame(passwords, 'Balrog'));
+//OUTPUT: 'You shall not pass!'
