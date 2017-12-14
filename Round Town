@@ -1,0 +1,26 @@
+/*
+sumMultiplyAndRound
+is a function
+returns a number
+returns the correct number"
+
+completed very quickly
+*/
+
+function sumMultiplyAndRound(a, b, c) {
+  var D = (Math.ceil((Math.floor(a+b))*c));
+ 	return D;
+}
+
+
+
+
+
+
+
+
+
+//EXAMPLE TESTS
+
+console.log(sumMultiplyAndRound(2, 3.5, 6.2))
+//OUTPUT: 31
