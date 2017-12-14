@@ -1,0 +1,57 @@
+/* 
+It took over 30 minutes to complete this challenge, because I initially did not take into account names that start with vowels.
+
+playNameGame
+is a function
+returns a string
+returns a string based on the name game
+*/
+
+function playNameGame(string) {
+	
+  a = string.split('');
+  b = string.split('');
+  c = string.split('');
+  d = string.split('');
+  
+ if (a.indexOf('A') === 0 || a.indexOf('E') === 0 || a.indexOf('I') === 0 || a.indexOf('O') === 0 || a.indexOf('U') === 0 ) {
+  name = a.join('');
+  
+  b.unshift('B');
+  bame1 = b.join('');
+  bame = bame1.charAt(0).toUpperCase() + bame1.slice(1).toLowerCase();
+  
+  c.unshift('F');
+  fame1 = c.join('');
+   fame = fame1.charAt(0).toUpperCase() + fame1.slice(1).toLowerCase();
+  
+   d.unshift('M');
+  mame1 = d.join('');
+   mame = mame1.charAt(0).toUpperCase() + mame1.slice(1).toLowerCase();
+  
+ } else {
+  name = a.join('');
+  b.splice(0,1,'B');
+  bame = b.join('');
+  c.splice(0,1,'F');
+  fame = c.join('');
+  d.splice(0,1,'M');
+  mame = d.join('');
+}
+return name +" "+ name +" Bo "+bame+ " Banana Fana Fo "+fame+" Fee Fi Mo "+mame+" "+name; 
+}
+
+
+
+
+
+
+
+
+
+//EXAMPLES TESTS
+console.log(playNameGame('Daniel'));
+// OUTPUT: "Daniel Daniel Bo Baniel Banana Fana Fo Faniel Fee Fi Mo Maniel Daniel"
+
+console.log(playNameGame('Ariel'));
+// OUTPUT: "Ariel Ariel Bo Bariel Banana Fana Fo Fariel Fee Fi Mo Mariel Ariel"
