@@ -1,0 +1,37 @@
+/* firstMediumHardQuestion!
+4 specs, 0 failures
+underToCamel
+returns a string value
+doesn't change a plain string
+removes the one underscore and capitalizes the proceeding character of the underscore
+removes multiple underscores and captilized the next character after each underscore
+*/
+
+
+function underToCamel(strings){
+array = strings.split('_');
+newArray = [];
+for (var i = 1 ; i < array.length ; i++) {
+newArray.push(array[i].charAt(0).toUpperCase() + array[i].slice(1).toLowerCase());	
+
+};
+  newArray.unshift(array[0]);
+  final = newArray.join('');
+  return final;
+}
+
+
+
+
+
+
+
+
+
+//EXAMPLE TESTS
+
+console.log(underToCamel("first_name"));
+//OUTPUT: "firstName"
+
+console.log(underToCamel("my_income_tax_from_2015"));
+//OUTPUT: "myIncomeTaxFrom2015"
