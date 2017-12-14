@@ -1,0 +1,29 @@
+/* 
+I started nesting for and if/else expressions twice to first work out whether an index of a array is an integer or an 2nd level array
+that was taking a long time to figure out so I googled concat on stack overflow
+then I searched concat and flatten and found the apply function.
+
+3 specs, 0 failures
+flatten
+returns an array
+returns a one-dimensional array
+flattens a nested (two-dimensional) array and returns a one-dimensional copy
+*/
+
+
+function flatten(array) {
+  var arr = [].concat.apply([], array);
+  return arr;
+}	
+
+
+
+
+
+
+
+//EXAMPLE TEST
+
+console.log(flatten([1,[2,3],4]));
+// OUTPUT: [1,2,3,4];
+
