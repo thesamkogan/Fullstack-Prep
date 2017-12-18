@@ -1,0 +1,26 @@
+/* Write Code Here */
+function mySlice(arr,strt,fnsh) {
+  if (fnsh >= 0) {
+    var arr2 = arr.splice(strt, fnsh-strt);
+    return arr2;
+  }
+  else if (fnsh < 0) {
+    var arr2 = arr.splice(strt,arr.length+fnsh);
+    return arr2;
+  } 
+  else if (!fnsh) {
+    var arr2 = arr.splice(strt);
+    return arr2;
+  }
+  else if (!strt) {
+    return arr;
+  }
+}
+
+
+ 
+console.log(mySlice([1, 2, 3, 4], 0, 3)); //[1,2,3]
+console.log(mySlice([1, 2, 3, 4], 0, 2)); //[1,2]
+console.log(mySlice([1, 2, 3, 4], 0, 1)); //[1]
+console.log(mySlice([1, 2, 3, 4], 0, 0)); //[]
+console.log(mySlice([1, 2, 3, 4], 1, 2)); //[2]
