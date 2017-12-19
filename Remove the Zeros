@@ -1,0 +1,31 @@
+/* 
+removeZeros
+is a function
+returns a number value
+strips all the zeros from a number
+returns NaN if the argument is already 0
+
+had to look up RegExp, convert to numbers
+*/
+
+function removeZeros(num) {
+  var numb = num.toString();
+  var final = numb.replace(/(0)/g, '');
+  if (final === '') {
+  	return NaN;}
+  else {
+  	return Number(final);}
+}
+
+
+
+
+
+
+//EXAMPLE TESTS
+
+console.log(removeZeros(6006606.203));
+//OUTPUT: 6666.23
+
+console.log(removeZeros(0));
+//OUTPUT: NaN
