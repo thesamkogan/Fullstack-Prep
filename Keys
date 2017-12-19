@@ -1,4 +1,14 @@
-/* Write Code Here */
+/* 
+changeKeys
+is a function
+returns an array
+it accepts an array of notes, and transposes their steps by the second argument value
+
+I cheated with this problem.
+By doubling the array keys, I fixed the issue where 5 keys passed 'G' would be undefined.
+*/
+
+
 function changeKeys(keysToChange, steps) {
   //Here is the chromatic scale--you will need to use this in your function!
   var keys = ['A', 'A#', 'B', 'C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B', 'C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#'];
