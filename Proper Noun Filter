@@ -1,0 +1,36 @@
+/*
+properNounFilter
+is a function
+returns a boolean
+returns false if the first character is not capitalized
+returns true if the first character is the only captialized character
+
+Very Easy
+*/
+
+
+function properNounFilter(string) {
+  a = string.charAt(0);
+  b = a.toLowerCase();
+	if (a === b) {
+  	return false;}
+  else {
+  	return true;}
+}
+
+
+
+
+
+
+
+//EXAMPLE TESTS
+
+console.log(properNounFilter('coffee'));
+// OUTPUT: false
+
+console.log(properNounFilter('Einstein'));
+// OUTPUT: true
+
+console.log(properNounFilter('ApoLLo'));
+// OUTPUT: false
