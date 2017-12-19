@@ -1,0 +1,26 @@
+/* 
+myPush
+is a function
+returns an array
+accepts an array and an additional argument and adds the argument to the end of the array
+
+Easy
+*/
+function myPush(arr,add) {
+	var final = arr.concat(add);
+  return final;
+}
+
+
+
+
+
+
+
+
+
+
+//EXAMPLE TESTS
+
+console.log(myPush([1, 2, 3], 4));
+//Output: [1, 2, 3, 4] 
