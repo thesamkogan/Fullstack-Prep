@@ -1,0 +1,36 @@
+/* 
+evenOdd
+is a function
+accepts an array and returns an array
+returns an multi-dimensional array with two nested arrays
+places even numbers from the argument array into the first nested array
+places odd number from the argument array into the second nested array
+separates even and odd numbers and places the them in the proper nested array
+*/
+
+
+function evenOdd(input) {
+var even = [];
+var odd = [];
+var newArray = [even,odd];
+const long = input.length;
+input.forEach(function(element) {
+   if (element % 2 === 0) {
+     even.push(element);
+  } 
+  else {
+    odd.push(element);
+  }
+  
+   });
+  return newArray;
+}
+
+ 
+
+
+
+//EXAMPLE TEST
+
+console.log(evenOdd([1,2,3,4,5,6]));
+// OUTPUT: [ [2,4,6], [1,3,5] ]
