@@ -1,0 +1,37 @@
+/* 
+myJoin
+is a function
+accepts an array argument and returns a string
+takes each value from the array and places the values in their same position as a string
+separates the values in the string with the second argument (the delimiter 
+*/
+
+function myJoin (a,b) {
+  var updated = a.filter(function(val){ return val!==undefined; });
+  var string = b;
+  if (!b && b !== '') {
+    var c = updated.toString();
+    return c;
+    } 
+    else {
+      const end = updated.length;
+        for (var i = end-1 ; i > 0 ; i--) {
+      var d = updated.splice(i,0,string);
+      
+      } var d = updated.toString();
+      var e = d.replace(/,/g,'');
+      return e;
+    }
+} 
+
+
+
+
+
+//EXAMPLE TESTS
+
+console.log(myJoin(['hello', undefined, 'world'], ' '));
+// OUTPUT: 'hello world'
+console.log(myJoin([2, "be", false]));
+// OUTPUT: '2,be,false`
+console.log(myJoin([1, 2, 3], '+'));
