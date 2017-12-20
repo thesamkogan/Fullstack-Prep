@@ -1,0 +1,31 @@
+/*
+This felt like a messy solution...
+
+rotate
+is a function
+returns an array
+shifts all the values in the array
+*/
+
+function rotate(a,b) {
+  arr = [];
+  const c = a.length;
+  if (b >= c) {
+    return a;
+  } else {
+  for (i = c-b ; i < c ; i++) {
+    arr.push(a.pop());
+    
+  }
+  arr.reverse();  
+  var v = arr.concat(a);
+  return v;
+  }
+ }
+
+
+
+//EXAMPLE TESTS
+
+rotate([22, 11, 500, 92], 2);
+//Output: [500, 92, 22, 11]
