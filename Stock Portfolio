@@ -1,4 +1,10 @@
-/* Write Code Here */
+/* 
+totalPortfolioValue
+is a function
+returns a number
+calculates the total value of a portfolio based on the ticker (first argument) and portfolio (second argument)
+calculates a large portfolio
+*/
 function totalPortfolioValue(ticker,portfolio) {
   //a is ticker an array ['string1',value1,'string2',value2]
   //b is a portfolio array [[string1,num1],[string2,num2]]
