@@ -1,0 +1,36 @@
+/* Write Code Here */
+function totalPortfolioValue(ticker,portfolio) {
+  //a is ticker an array ['string1',value1,'string2',value2]
+  //b is a portfolio array [[string1,num1],[string2,num2]]
+  // b[0][0] = string1, b[0][1] = num1
+  
+	var value = []
+  var sum = 0
+  
+ // Nesting loops should go through all possible matches
+  // These could be enhanced by skipping all even indexs of ticker array which are numbers
+ for (var tickerIndex = 0 ; tickerIndex < ticker.length ; tickerIndex++){
+  	for (var portfolioIndex = 0 ; portfolioIndex < portfolio.length ; portfolioIndex++){
+      // the ticker index x should math portfolio [y][0]
+      if (ticker[tickerIndex] === portfolio[portfolioIndex][0]){ 
+        //if x = y then push the value which is index of x +1 and index of [y][1]
+        value.push(ticker[tickerIndex+1] * (portfolio[portfolioIndex][1]));
+        }
+      } 
+   //it's crucial to place the summation outside of the loop
+    } for (var i = 0; i < value.length; i++) {
+      //all values in the value array should be added to the sum variable.
+      sum+= value[i];
+      }
+  return sum;
+}
+
+
+
+//EXAMPLE TESTS
+
+var ticker = ['ABC', 10, 'XYZ', 200, 'BBB', 5];
+var portfolio = [['XYZ', 20], ['BBB', 10]];
+
+console.log(totalPortfolioValue(ticker, portfolio));
+//OUTPUT: 4050
