@@ -1,0 +1,26 @@
+/* 
+isPrime
+is a function
+returns a boolean
+returns false if a number is not prime
+returns true if a number is prime
+
+Easy, but didn't actually look up a definition to make a more efiicient script
+*/
+
+
+function isPrime(num) {
+	if (num % 2 === 0 && num !== 2 || num % 3 === 0 && num !== 3 || num % 5 === 0 && num !== 5 || num % 7 === 0 && num !== 7 ||  num % 9 === 0 && num !== 9) {
+  return false;} else { return true;}
+}
+
+
+
+
+//EXAMPLE TESTS
+
+console.log(isPrime(5)); 
+//OUTPUT: true
+
+console.log(isPrime(10));
+//OUTPUT: false
