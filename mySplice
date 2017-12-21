@@ -1,71 +1,62 @@
-INCOMPLETE
-
 /*
-var arrr = [1,2,3,4,5];
-v = arrr.splice(1,2);
-console.log(v);
+mySplice
+is a function
+returns an array
+utilizes the "starting point"; removes elements from the starting point to the end of the array and returns an array of the elements removed
+the delete count (third argument), deletes indexes from the "starting point"
+
+well, this took all day, the logic was 1/5th of the time,
+most of the time was spent troubleshooting and correcting dumb problems.
 
 */
-var art = [1, 2, 3, 4];
 
 function mySplice(art, start, remove, ...add) {
   var output = [];
-
+//Sound logic for zero remove.
   if (!remove && remove !== 0) {
     for (var i = art.length; i > start; i--) {
       output.unshift(art.pop());
-    } //for loop no remove value
-    console.log('output no remove' + output);
-  } 
-  
-  else if (remove >= 0) {
-    //push art before start to output
-    //push add to output
-    //push final parts of art
-    for (var k = 0; k < start; k++) {
-      output.unshift(art.shift());
-    }
-    art.unshift(add);
-    console.log('output pre adding final ' + output);
-    if (remove > 0) {
-      for (var L = art.length; L > remove ; L--) {
-        output.unshift(art.pop());
-      }
-      console.log('output if removing' + output);
-    }
+    } console.log('start only, [ ' +output+ ' ] is output!');
   }
 
-  
-  var vart = art.filter(function(x) {
-    return x !== (undefined || null || '');
-  });
-  return 'art is ' + vart;
+  else {
+    if (remove >= 0) {
+      var temp = [];
+      const long = art.length;
+        //store tail in temp
+        for (var k = long; k > start+remove; k--) {
+        temp.unshift(art.pop());
+      }
+      //moved entries to output
+      for (var m = 0 ; m < remove; m++) {
+        output.unshift(art.pop());
+      }
+      //push arguments in
+      for (var n = 0 ; n < add.length ; n++ ){
+        art.push(add[n]);
+      }
+      //push temporarily stored values back in
+      for (var o = 0 ; o < temp.length ; o++) {
+        art.push(temp[o]);
+      }
+    }
+  }
+  return output;
 } //function
 
-console.log('first ' + mySplice(art, 1));
-//OUTPUT: [2, 3, 4]  --> arr is now [1]
-console.log('second ' + mySplice(art, 0, 0, 5, 6, 7));
-//OUTPUT: []  --> arr is now [5, 6, 7, 1]
-console.log('third ' + mySplice(art, 1, 2, 'new'));
-//OUTPUT: [6, 7] --> arr is now [5, 'new', 1]
+/* Tests
 
-/*function mySplice(arr,start,remove,...add) {
-  var b = arr.splice(start,remove,...add);
-  return arr;
-}
+var array = [1, 2, 3, 4, 5, 6, 7, 8];
+  console.log(mySplice(array, 2, 4));
+  //OUTPUT: [3, 4, 5, 6] --> arr is now [1, 2, 7, 8];
 
+var arr = [1,2,3,4];
+  console.log(mySplice(arr, 1));    
+  //OUTPUT: [2, 3, 4]  --> arr is now [1]
 
-
-
-
-var arr = [1,2,3,4]
-
-console.log(mySplice(arr, 1,arr.length));    
-//OUTPUT: [2, 3, 4]  --> arr is now [1]
-
-//console.log(mySplice(arr, 0, 0, 5, 6, 7));
+console.log(mySplice(arr, 0, 0, 5, 6, 7));
 //OUTPUT: []  --> arr is now [5, 6, 7, 1]
 
-//console.log(mySplice(arr, 1, 2, 'new'));
-//OUTPUT: [6, 7] --> arr is now [5, 'new', 1]
+console.log(mySplice(arr, 1, 2, 'new'));
+//OUTPUT: [6, 7] --> arr is now [5, 'new', 1];
 */
