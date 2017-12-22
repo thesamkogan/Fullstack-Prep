@@ -1,0 +1,72 @@
+I had to look up solutions for this challenge, but also worked backwards understanding what happened at each step.
+
+objectifier
+is a function
+returns an object
+structures an object with nested properties and values based on the array argument
+structures an object with multiple nested arrays
+
+///*
+function objectifier(arr) {
+  var theObject = {};
+  for (i=0 ; i < arr.length ; i++) {
+    var keys = arr[i][0];
+    //console.log(keys); //here prints animals then guitars
+    theObject[keys] = {};
+    //console.log(theObject); //shows each objecct with a empty data set
+    var values = arr[i][1];
+    //console.log(values); // shows each key with values only
+    for (var j = 0; j < values.length; j++){
+      if (j%2 === 0){
+        theObject[keys][values[j]] = values[j+1];
+      } 
+    } // for loop for classes
+  } return theObject;//function
+}
+//*/
+
+
+
+
+var data = [
+  [ 'animals',
+    [
+      'dogs', ['Corgi', 'Sheltie'],
+      'cats', ['Tabby','Black'],
+      'pigs', ['Teacup']
+    ]
+  ],
+  [ 'guitars',
+    [
+      'Fender', ['Telecaster', 'Stratocaster','Jazzmaster'],
+      'Gibson', ["Gibson Flying-V", 'Firebird', 'Les Paul']
+    ]
+  ]
+];
+
+
+
+
+
+
+
+
+//EXAMPLE TEST
+
+
+
+console.log(objectifier(data));
+//console.log(data[1][0]);
+//OUTPUT: 
+//
+// {
+// animals : {
+//     dogs : ['Corgi', 'Sheltie'],
+//     cats : ['Tabby','Black'],
+//     pigs : ['Teacup']
+// },
+// guitars : {
+//     Fender : ['Telecaster', 'Stratocaster','Jazzmaster'],
+//     Gibson : ["Gibson Flying-V", 'Firebird', 'Les Paul']
+// }
+// }
