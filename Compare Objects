@@ -1,0 +1,53 @@
+/* 
+compareObjects
+is a function
+returns a boolean
+returns false if both objects do not match properties and values
+returns true if both object match properties and values
+
+Originally tried to make this simple. and the correct boolean was returned, but the actual function came back undefined.
+
+function compareObjects(a, b) {
+  for (var key in a) {
+    for (var key2 in b) {
+       return (a[key] === b[key2]);
+      }
+   }
+}
+
+//EXAMPLE TESTS
+
+console.log(compareObjects({ name: 'giselle' }, { name: 'zeke' }));
+// OUTPUT: false
+
+console.log(compareObjects({ name: 'nick' }, { name: 'nick' }));
+// OUTPUT: true
+
+*/
+
+
+function compareObjects(a, b) {
+  for (var key in a) {
+    if (a[key] !== b[key]) {
+      return false;
+      }
+    }
+  for (var key2 in b) {
+    if (a[key2] !== b[key2]) {
+      return false;
+      }
+    }
+  return true;
+}
+
+
+
+//EXAMPLE TESTS
+
+console.log(compareObjects({ name: 'giselle' }, { name: 'zeke' }));
+// OUTPUT: false
+
+console.log(compareObjects({ name: 'nick' }, { name: 'nick' }));
+// OUTPUT: true
+
+
