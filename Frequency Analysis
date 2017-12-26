@@ -1,0 +1,28 @@
+/* Very Fast, after editing 'Reduce the Frequency' */
+
+function frequencyAnalysis(string) { 
+ arr = string.split('');
+ const countedNames = arr.reduce(function (allNames, name) { 
+  if (name in allNames) {
+    allNames[name]++;
+  }
+  else {
+    allNames[name] = 1;
+  }
+  return allNames;
+}, {});
+return countedNames;}
+
+
+
+
+
+
+
+
+
+console.log(frequencyAnalysis('abca'));
+// OUTPUT: {a: 2, b: 1, c: 1}
+
+console.log(frequencyAnalysis(''));
+// OUTPUT: { }
