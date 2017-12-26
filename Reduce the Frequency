@@ -1,0 +1,46 @@
+/*
+Initially forgot to use .reduce()
+
+function strFrequency(names)  {
+ var obj = {};
+	for (var key of names) {
+    if (obj[key] in names) {
+    obj[key]++;
+  }
+  else {
+    obj[key] = 1;
+ }
+
+}return obj;
+}
+
+var names = ["Bob", "Bill", "Bo", "Ben", "Bob", "Brett", "Ben", "Bill", "Bo", "Ben", "Bob", "Ben"];
+
+console.log(strFrequency(names));
+//OUTPUT: {Bob: 3, Bill: 2, Bo: 2, Ben: 4, Brett: 1}
+
+strFrequency
+is a function
+returns an object
+uses Array.prototype.reduce
+takes an array of strings and determines each string's frequency
+*/
+
+function strFrequency(nameList) { 
+ const countedNames = nameList.reduce(function (allNames, name) { 
+  if (name in allNames) {
+    allNames[name]++;
+  }
+  else {
+    allNames[name] = 1;
+  }
+  return allNames;
+}, {});
+return countedNames;}
+  
+  
+var names = ["Bob", "Bill", "Bo", "Ben", "Bob", "Brett", "Ben", "Bill", "Bo", "Ben", "Bob", "Ben"];
+
+//console.log(sum);
+console.log(strFrequency(names));
+//OUTPUT: {Bob: 3, Bill: 2, Bo: 2, Ben: 4, Brett: 1}
