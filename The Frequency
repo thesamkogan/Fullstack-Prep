@@ -1,0 +1,23 @@
+/*
+Initially forgot to use .reduce()
+
+function strFrequency(names)  {
+ var obj = {};
+	for (var key of names) {
+    if (obj[key] in names) {
+    obj[key]++;
+  }
+  else {
+    obj[key] = 1;
+ }
+
+}return obj;
+}
+
+var names = ["Bob", "Bill", "Bo", "Ben", "Bob", "Brett", "Ben", "Bill", "Bo", "Ben", "Bob", "Ben"];
+
+console.log(strFrequency(names));
+//OUTPUT: {Bob: 3, Bill: 2, Bo: 2, Ben: 4, Brett: 1}
+
+
+*/
