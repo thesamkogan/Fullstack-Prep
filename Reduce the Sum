@@ -1,0 +1,27 @@
+/* 
+Easy, had to look up .reduce specs
+
+sumReduce
+is a function
+call the Array.prototype.reduce method
+the starting value is 50
+sums the value of the array and adds it to the starting value (50)
+*/
+
+
+function sumReduce(arr) {
+	const reducer = (accumulator, currentValue) => accumulator + currentValue;
+  return arr.reduce(reducer, 50);
+}
+
+
+
+
+
+//EXAMPLE TESTS
+
+console.log(sumReduce([1,2,3,4]));
+// OUTPUT: 60
+
+console.log(sumReduce([]));
+// OUTPUT: 50
