@@ -1,0 +1,42 @@
+ /* Quick
+ the function myMap
+is a function
+returns an array
+takes our doubling function and applies it to an array
+takes a tripling function
+should not use Array.prototype.map
+ */
+ 
+ 
+function myMap(arr, func) {
+      var next = [];
+  for (a = 0 ; a < arr.length ; a++) {
+    next.push(func(arr[a]));
+  } return next;
+}
+
+
+
+
+
+
+
+
+
+
+
+//EXAMPLE TESTS
+
+var arr = [1,2,3];
+
+function double(num) {
+  return num * 2;
+}
+
+console.log(myMap(arr, double));
+//OUTPUT: [2,4,6]
+
+console.log(myMap(arr, function(num) {
+  return num.toString();
+}));
+//OUTPUT: ['1','2','3'];
